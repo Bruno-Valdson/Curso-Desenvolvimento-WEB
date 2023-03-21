@@ -14,6 +14,7 @@ body{
     height: 50px;
     padding: 5px;
     width: auto; 
+    text-align: center;
 }
 #menu ul{
     display: flex;
@@ -42,6 +43,8 @@ body{
     color: #00FF00;
 }
 h1{
+    font-size: 7vw;
+    margin: auto;
     text-align: center;
     color: #00FF00;
     text-shadow: 4px 4px 4px black;
