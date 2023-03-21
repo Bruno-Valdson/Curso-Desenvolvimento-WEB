@@ -14,6 +14,11 @@ body{
     padding: 10px;
     text-align: center;   
 }
+#menu li{
+    float: left;
+    list-style: none;
+    padding: 2px;
+}
 #menu a{
     background-color: yellow;
     border-radius: 15px;
