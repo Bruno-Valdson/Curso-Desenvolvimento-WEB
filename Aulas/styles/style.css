@@ -8,13 +8,14 @@ body{
     position: sticky;
     top: 0px;
     height: 50px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 5px;
-    width: 25%;
+    width: auto; 
+}
+#menu ul{
+    display: flex;
+    justify-content: center;
 }
 #menu li{
-    float: left;
     list-style: none;
     padding: 2px;
 }
