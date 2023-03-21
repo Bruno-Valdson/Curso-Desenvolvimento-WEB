@@ -5,6 +5,8 @@ body{
     background: linear-gradient(30deg, black 35%, green 95%);
 }
 #menu{
+    position: sticky;
+    top: 0px;
     height: 40px;
     width: 400px;
     margin-left: auto;
