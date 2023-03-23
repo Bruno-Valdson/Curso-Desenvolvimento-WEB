@@ -5,42 +5,53 @@ html{
 body{
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
-    font-style: italic;
+    font-style: normal;
     background: linear-gradient(30deg, black 35%, green 95%);
 }
-#menu{
+.head{
     position: sticky;
-    top: 0px;
-    height: 50px;
-    padding: 5px;
-    width: auto; 
-    text-align: center;
-}
-#menu ul{
-    display: flex;
-    justify-content: center;
-}
-#menu li{
-    list-style: none;
-    padding: 2px;
-}
-#menu a{
-    background-color: yellow;
+    top: 0;
+    margin: auto;
+    overflow: hidden;
+    width: 50%;
+    padding: 10px;
+    background-color: white;
     border-radius: 15px;
     box-sizing: border-box;
-    font-size: 15px;
-    font-style: normal;
     color: green;
-    padding: 10px 10px 7px 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.menu{
+    padding: 0px;
+    margin: 0px;
+    float: right;
+    list-style: none;
+}
+.menu li{
+    display: inline-block;
+    padding: 0px;
+    margin: 0;
+    margin-right: 10px;
+}
+.menu a{
+    color: green;
+    margin: 0;
+    padding: 0;
     text-decoration: none;
 }
-#menu a:visited{
+.menu a:visited{
     color: black;
 }
-#menu a:hover{
+.menu a:hover{
     padding: 10px;
     background-color: white;;
     color: #00FF00;
+}
+.logo{
+    padding: 0px;
+    margin: 0px;
+    float: left;
 }
 h1{
     font-size: 7vw;
@@ -56,7 +67,6 @@ p{
 h2{
     color: #00FF00;
 }
-/*Logo*/
 .imagem{
     margin-left: 1px;
 }
