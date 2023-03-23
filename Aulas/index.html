@@ -18,6 +18,7 @@
             <li><a href="#header">Cabeçalho</a></li>
             <li><a href="#image">Imagem</a></li>
             <li><a href="#social">Social</a></li>
+            <li><a href="#formulario">Inscrição</a></li>
         </ul>
     </div>
     <div id="header">
@@ -94,14 +95,15 @@
         </ul>
         <!-- Fim Meus Dados -->
     </div>
-    <div class="formulario">
+    <div id="formulario">
         <!-- Inicio Formulario -->
         <br>
         <h2>Formulário de inscrição</h2>
         Dados para contato
         <form action="/Aulas/index.html" method="get">
-            <input type="text" name="nome">
-            <input type="text" name="e-mail"><br><br>
+            Nome: <input type="text" name="nome"><br>
+            E-mail: <input type="e-mail" name="e-mail"><br>
+            Telefone: <input type="tel" name="telefone"><br><br>
 
             Selecione o(s) curo(s)
             <br>
@@ -124,8 +126,13 @@
             Comentários
             <br>
             <textarea name="conentario"></textarea>
-
             <br><br>
+
+            Anexo
+            <br>
+            <input type="file" name="arquivo">
+            <br><br>
+
             <input type="reset" value="Limpar Campos">
             <input type="submit" value="Enviar" selected><br>
         </form>
