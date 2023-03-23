@@ -104,6 +104,9 @@ li{
 }
 
 @media screen and (max-width: 670px){
+    .head{
+        position: static;
+    }
     .logo{
         float: none;
         text-align: center;
