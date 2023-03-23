@@ -53,16 +53,17 @@
         <!-- Fim Paragrafos-->
     </div>
     <div id="image">
-        <!-- Imagem da Página -->
+        <!-- Inicio Imagem da Página -->
         <h2>Imagem</h2>
         <figure class="imagem">
             <img alt="Logo BRD Tecnologia"
                 src="https://media.licdn.com/dms/image/D4D0BAQFMVKL0RIEEeQ/company-logo_100_100/0/1666735153282?e=1687392000&v=beta&t=XhsmPInbcosDdMIV_hR3C31gdTDVVvOLXo2Gxo-NMtI">
             <figcaption class="descrição"><i>BRD Tecnologia</i></figcaption>
         </figure>
+        <!-- Fim Imagem da Página -->
     </div>
     <div id="social">
-        <!-- Meus Contatos -->
+        <!-- Inicio Meus Dados -->
         <h2>Minhas Redes</h2>
         <ul>
             <li>
@@ -91,24 +92,40 @@
             </li>
             </li>
         </ul>
+        <!-- Fim Meus Dados -->
     </div>
     <div class="formulario">
+        <!-- Inicio Formulario -->
         <br>
         <h2>Formulário de inscrição</h2>
+        Dados para contato
         <form action="/Aulas/index.html" method="POST">
             <input type="text" name="nome">
             <input type="text" name="e-mail"><br><br>
 
+            Selecione o(s) curo(s)
+            <br>
             <input type="checkbox" name="curso" value="op1"> React Native<br>
             <input type="checkbox" name="curso" value="op2"> React JS<br><br>
 
+            Sexo
+            <br>
             <input type="radio" name="genero" value="Masculino">Masculino<br>
             <input type="radio" name="genero" value="Feminino">Feminino<br><br>
 
-            <input type="reset" value="Limpar Campos">
+            Estado
+            <br>
+            <select name="estado">
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP" selected>São Paulo</option>
+            </select>
+            <br><br>
 
-            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar Campos">
+            <input type="submit" value="Enviar" selected><br>
+
         </form>
+        <!-- Fim Formulario -->
     </div>
 </body>
 
