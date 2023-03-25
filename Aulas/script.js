@@ -1,5 +1,8 @@
-console.log("Hello World!");
+var user = console.log('Qual o seu nome?');
+prompt("");
 
-// Variaveis
-var user = "Bruno Valdson";
-console.log(user);
+if (user=="Bruno Valdson") {
+    console.log("Boa tarde, " + user + "!");
+} else {
+    console.log("Usuário não encontrado.");
+}
