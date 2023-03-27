@@ -11,4 +11,14 @@ window.onload = function(){
         let t = e.target;
         console.log(t.parentElement);
     }
+
+    let a = {
+        nome: "Bruno",
+        sobrenome: "Valdson"
+    }
+
+    let b = JSON.stringify(a);
+
+    console.log(a);
+    console.log(b);
 }
