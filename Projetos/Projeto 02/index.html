@@ -7,18 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Churrascômetro</title>
     <link rel="stylesheet" href="./styles/style.css">
-    
 </head>
 
 <body>
     <div class="container">
-        <h1>Churrascômetro</h1>
-        <input type="number" name="adultos" id="adultos" placeholder="Adultos">
-        <input type="number" name="criancas" id="criancas" placeholder="Crianças">
-        <input type="number" name="duracao" id="duracao" placeholder="Duração (h)">
-        <button onclick="calcular()">Calcular</button>
-        <div id="resultado">
+        <h1>Convidados</h1>
+        <h4>Defina a quantidade de pessoas do seu churrasco</h4>
+        <div class="convidados">
+            <div class="qtdAdultos">
+                <img class="icons" src="./img/convidados.png" alt="convidados-adultos">
+                <!-- <input type="number" name="adultos" id="adultos" placeholder="Adultos"> -->
+                <p>0</p>
+                <button class="qtdAdd">+</button>
+                <button class="qtdSub">-</button>
+            </div>
+            <div class="qtdCriancas">
+                <img class="icons" src="./img/crianças.png" alt="convidados-crianças">
+                <!-- <input type="number" name="criancas" id="criancas" placeholder="Crianças"> -->
+                <p>0</p>
+                <button class="qtdAdd">+</button>
+                <button class="qtdSub">-</button>
+            </div>
+            <div class="qtdDuracao">
+                <img class="icons" src="./img/crianças.png" alt="convidados-crianças">
+                <p>0</p>
+                <button class="qtdAdd">+</button>
+                <button class="qtdSub">-</button>
+                <!-- <input type="number" name="duracao" id="duracao" placeholder="Duração (h)"> -->
+            </div>
+            
+            <!-- <button onclick="calcular()">Calcular</button> -->
         </div>
+        <!-- <img class="image-fundo" src="./img/img-churrasco.png" alt=""> -->
+    </div>
+    <div class="resultado">
     </div>
     <script src="./scripts/script.js"></script>
 </body>
