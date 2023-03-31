@@ -11,9 +11,7 @@
 
 <body>
     <header class="menu">
-        <div class="imgTop">
-            <!-- <img class="imgTop" src="./img/img-churrasco.png" alt=""> -->
-        </div>
+        <div class="imgTop"></div>
     </header>
     <div class="container">
         <div class="title-description">
@@ -23,7 +21,7 @@
             <div class="description">
                 <p>Indique quantos convidados entre adultos e crianças
                     estarão presentes no seu churrasco que o churrascômetro
-                    Masterboi te dará a quantidade certa que você deve comprar
+                    te dará a quantidade certa que você deve comprar
                     para que a sua festa seja um sucesso.</p>
             </div>
         </div>
@@ -31,54 +29,56 @@
             <div class="column-1">
                 <div class="title-description">
                     <h4 class="title">Convidados</h4>
-                    <h6>Defina a quantidade de pessoas do seu churrasco</h6>
+                    <h6 class="subtitle">Defina a quantidade de pessoas do seu churrasco</h6>
                 </div>
-                <div class="qtd">
-                    <div class="qtdAdultos icon-adulto">
-                        <p class="icons icon-adulto"></p>
-                        <!-- <input type="number" name="adultos" id="adultos" placeholder="Adultos"> -->
-                        <div class="btn">
-                            <p>0</p>
-                            <button class="btnIcons">+</button>
-                            <button class="btnIcons">-</button>
+                <div id="qtdConvidados" class="qtd">
+                    <div id="qtdAdultos" class="qtdAdultos">
+                        <div class="icons icon-adulto"></div>
+                        <div id="adultos">
+                            <p id="qtdAdulto" class="qtdNum">0</p>
+                            <div class="btn">
+                                <input type="button" id="btnPlus-adulto" class="btnIcons" value="+">
+                                <input type="button" id="btnSub-adulto" class="btnIcons" value="-">
+                            </div>
                         </div>
                     </div>
-                    <div class="qtdCriancas icon-criancas">
-                        <!-- <img class="icons icon-criancas" src="./img/crianças.png" alt="convidados-crianças"> -->
-                        <!-- <input type="number" name="criancas" id="criancas" placeholder="Crianças"> -->
-                        <p class="icons icon-criancas"></p>
-                        <div>
-                            <p>0</p>
-                            <button class="btnIcons">+</button>
-                            <button class="btnIcons">-</button>
+                    <div id="qtdCriancas" class="qtdCrianca">
+                        <div class="icons icon-criancas"></div>
+                        <div id="criancas">
+                            <p id="qtdCrianca" class="qtdNum">0</p>
+                            <div class="btn">
+                                <input type="button" id="btnPlus-crianca" class="btnIcons" value="+">
+                                <input type="button" id="btnSub-crianca" class="btnIcons" value="-">
+                            </div>
                         </div>
                     </div>
-                    <div class="qtdCriancas icon-duracao">
-                        <!-- <img class="icons icon-duracao" src="./img/crianças.png" alt="convidados-crianças"> -->
-                        <!-- <input type="number" name="criancas" id="criancas" placeholder="Crianças"> -->
-                        <p class="icons icon-duracao"></p>
-                        <div>
-                            <p>0</p>
-                            <button class="btnIcons">+</button>
-                            <button class="btnIcons">-</button>
+                    <div class="qtdTemp">
+                        <div class="icons icon-duracao"></div>
+                        <div id="duracao">
+                            <p id="qtdDuracao" class="qtdNum">0</p>
+                            <div class="btn">
+                                <input type="button" id="btnPlus-duracao" class="btnIcons" value="+">
+                                <input type="button" id="btnSub-duracao" class="btnIcons" value="-">
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="column-2">
-                <div class="resultado">
-                    <p>Carne</p>
-                    <p>Cerveja</p>
-                    <p>Refrigerante</p>
-                    <p>Refrigerante</p>
-                    <p>Refrigerante</p>
                 </div>
             </div>
-            <!-- <button onclick="calcular()">Calcular</button> -->
+            <div id="column-2" class="column-2">
+                <div>
+                    <h1 class="title-resul">Resultado</h1>
+                </div>
+                <div id="resultado" class="resultado">
+                    <!-- <p id="resultado"></p>
+                    <p id="resultado"></p>
+                    <p id="resultado"></p> -->
+                </div>
+            </div>
         </div>
-        <!-- <img class="image-fundo" src="./img/img-churrasco.png" alt=""> -->
     </div>
-    </div>
+    <footer>
+
+    </footer>
     <script src="./scripts/script.js"></script>
 </body>
 
