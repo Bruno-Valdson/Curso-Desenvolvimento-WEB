@@ -64,32 +64,40 @@ window.onload = function () {
 
         let resultado = document.getElementById("resultado");
 
-        let qtdTotalCarne = carnePP(duracao) * adulto + (carnePP(duracao) / 2 * criancas);
-        let qtdTotalCerveja = cervejaPP(duracao) * adulto
-        let qtdTotalBebidas = bebidasPP(duracao) * adulto + (bebidasPP(duracao) / 2 * criancas);
+        let qtdTotalCarne = carnePP(qtdDuracao) * qtdAdultos + (carnePP(qtdDuracao) / 2 * qtdCrianca);
+        let qtdTotalCerveja = cervejaPP(qtdDuracao) * qtdAdultos
+        let qtdTotalBebidas = bebidasPP(qtdDuracao) * qtdAdultos + (bebidasPP(qtdDuracao) / 2 * qtdCrianca);
 
-        resultado.innerHTML = `<p>${qtdTotalCarne / 1000}Kg de Carne</p>`
-        resultado.innerHTML += `<p>${Math.ceil(qtdTotalCerveja / 355)} Latas de Cerveja</p>`
-        resultado.innerHTML += `<p>${Math.ceil(qtdTotalBebidas / 2000)} Garrafas de 2L de Refrigerante</p>`
+        console.log(qtdDuracao);
+        console.log(qtdAdultos);
+        console.log(qtdCrianca);
+
+        console.log(qtdTotalCarne);
+        console.log(qtdTotalCerveja);
+        console.log(qtdTotalBebidas);
+
+        resultado.innerHTML = `<p>${qtdTotalCarne/1000}Kg de Carne</p>`
+        resultado.innerHTML += `<p>${Math.ceil(qtdTotalCerveja/355)} Latas de Cerveja</p>`
+        resultado.innerHTML += `<p>${Math.ceil(qtdTotalBebidas/2000)} Garrafas de 2L de Refrigerante</p>`
     });
 
-    function carnePP(duracao) {
-        if (duracao >= 6) {
+    function carnePP(qtdDuracao) {
+        if (qtdDuracao >= 6) {
             return 650;
         } else {
             return 400
         }
     }
-    function cervejaPP(duracao) {
+    function cervejaPP(qtdDuracao) {
         ;
-        if (duracao >= 6) {
+        if (qtdDuracao >= 6) {
             return 2000;
         } else {
             return 1200
         }
     }
-    function bebidasPP(duracao) {
-        if (duracao >= 6) {
+    function bebidasPP(qtdDuracao) {
+        if (qtdDuracao >= 6) {
             return 1500;
         } else {
             return 1000
