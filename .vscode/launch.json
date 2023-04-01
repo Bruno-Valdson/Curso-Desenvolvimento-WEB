@@ -8,14 +8,14 @@
             "name": "Launch Edge",
             "request": "launch",
             "type": "msedge",
-            "url": "http://localhost:5500",
+            "url": "http://localhost:9222",
             "webRoot": "${workspaceFolder}"
         },
         {
             "type": "vscode-edge-devtools.debug",
             "request": "launch",
             "name": "Launch Microsoft Edge and open the Edge DevTools",
-            "url": "http://localhost:5500",
+            "url": "http://localhost:9222",
             "webRoot": "${workspaceFolder}"
         },
         {
@@ -32,7 +32,7 @@
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
             ],
-            "url": "localhost:5500",
+            "url": "localhost:9222",
             "presentation": {
                 "hidden": true
             }
@@ -45,7 +45,7 @@
                 "--headless",
                 "--remote-debugging-port=9222"
             ],
-            "url": "localhost:5500",
+            "url": "localhost:9222",
             "presentation": {
                 "hidden": true
             }
@@ -54,7 +54,7 @@
             "type": "vscode-edge-devtools.debug",
             "name": "Open Edge DevTools",
             "request": "attach",
-            "url": "localhost:5500",
+            "url": "localhost:9222",
             "presentation": {
                 "hidden": true
             }
