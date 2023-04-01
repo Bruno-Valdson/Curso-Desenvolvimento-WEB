@@ -7,12 +7,12 @@ body {
     overflow-x: hidden;
     margin: auto;
 }
-
 header {
     display: block;
-    height: 30%;
+    margin: auto;
+    height: 400px;
+    text-align: center;
 }
-
 .menu {
     width: 2000px;
     max-width: 100%;
@@ -21,17 +21,11 @@ header {
     margin-right: auto;
     position: relative;
 }
-
-.imgTop {
-    background-image: url(../img/img-churrasco.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: 10%;
-    width: 50%;
+.imgTop{
     height: 400px;
+    text-align: center;
     margin: auto;
 }
-
 .container {
     margin-bottom: 3rem;
     padding-left: 2rem;
@@ -40,22 +34,17 @@ header {
     margin: auto;
     height: 80%;
 }
-
-.body {
-    /* width: 100%; */
+.content {
     display: flex;
     flex-flow: row wrap;
     align-content: space-between;
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    /* margin: auto; */
 }
-
 .column-1 {
     width: 70%;
 }
-
 .title {
     font-size: 31px;
     font-weight: bold;
