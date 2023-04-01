@@ -26,7 +26,9 @@
             </div>
         </div>
         <div class="body">
+            <!-- Quantidades -->
             <div class="column-1">
+                <!-- Quanditade de convidados -->
                 <div class="title-description">
                     <h4 class="title">Convidados</h4>
                     <h6 class="subtitle">Defina a quantidade de pessoas do seu churrasco</h6>
@@ -63,43 +65,63 @@
                         </div>
                     </div>
                 </div>
+                <!-- Bebidas para o churrasco -->
                 <div class="title-description">
                     <h4 class="title">Bebidas</h4>
                     <h6 class="subtitle">Defina as bebidas que serão consumidas no seu churrasco</h6>
                 </div>
-                <div id="qtdConvidados" class="qtd">
-                    <div id="qtdAdultos" class="qtdAdultos">
-                        <div class="icons icon-adulto"></div>
-                        <div id="adultos">
-                            <p id="qtdAdulto" class="qtdNum">0</p>
-                            <div class="btn">
-                                <input type="button" id="btnPlus-adulto" class="btnIcons" value="+">
-                                <input type="button" id="btnSub-adulto" class="btnIcons" value="-">
-                            </div>
+                <div id="qtdBebidas" class="qtd">
+                    <div id="tp-bebidas" class="tp-cerveja">
+                        <div class="bb-icons icon-cerveja"></div>
+                        <div id="bb-cerveja">
+                            <p id="bebidas" class="cerveja">Cerveja (600ml)</p>
                         </div>
                     </div>
-                    <div id="qtdCriancas" class="qtdCrianca">
-                        <div class="icons icon-criancas"></div>
-                        <div id="criancas">
-                            <p id="qtdCrianca" class="qtdNum">0</p>
-                            <div class="btn">
-                                <input type="button" id="btnPlus-crianca" class="btnIcons" value="+">
-                                <input type="button" id="btnSub-crianca" class="btnIcons" value="-">
-                            </div>
+                    <div id="tp-bebidas" class="tp-cerveja-lata">
+                        <div class="bb-icons icon-cerveja-lata"></div>
+                        <div id="bb-cerveja">
+                            <p id="bebidas" class="cerveja-lata">Cerveja lata</p>
                         </div>
                     </div>
-                    <div class="qtdTemp">
-                        <div class="icons icon-duracao"></div>
-                        <div id="duracao">
-                            <p id="qtdDuracao" class="qtdNum">0</p>
-                            <div class="btn">
-                                <input type="button" id="btnPlus-duracao" class="btnIcons" value="+">
-                                <input type="button" id="btnSub-duracao" class="btnIcons" value="-">
-                            </div>
+                    <div id="tp-bebidas" class="tp-refrigerante">
+                        <div class="bb-icons icon-refrigerante"></div>
+                        <div id="bb-cerveja">
+                            <p id="bebidas" class="refrigerante">Refrigerantes</p>
                         </div>
                     </div>
                 </div>
+                <!-- Acompanhamentos -->
+                <div class="title-description">
+                    <h4 class="title">Acompanhamentos</h4>
+                    <h6 class="subtitle">Acompanhamentos para o seu seu churrasco</h6>
+                </div>
+                <div id="qtd-acompanhamentos" class="qtd">
+                    <div id="outros" class="acompanhamentos">
+                        <input type="checkbox" id="check" name="check" value="VINAGRETE">
+                        <label clasfor="description">VINAGRETE</label><br>
+                        <input type="checkbox" id="check" name="check" value="ARROZ">
+                        <label for="description">ARROZ</label><br>
+                        <input type="checkbox" id="check" name="check" value="FAROFA PRONTA">
+                        <label for="description">FAROFA PRONTA</label><br><br>
+                    </div>
+                </div>
+                <!-- Suprimentos -->
+                <div class="title-description">
+                    <h4 class="title">Suprimentos</h4>
+                    <h6 class="subtitle">Suprimentos para o seu churrasco</h6>
+                </div>
+                <div id="qtdSuprimentos" class="qtd">
+                    <div id="outros" class="acompanhamentos">
+                        <input type="checkbox" id="check" name="check" value="VINAGRETE">
+                        <label clasfor="description">CARVÃO</label><br>
+                        <input type="checkbox" id="check" name="check" value="ARROZ">
+                        <label for="description">COPOS</label><br>
+                        <input type="checkbox" id="check" name="check" value="FAROFA PRONTA">
+                        <label for="description">PRATOS</label><br><br>
+                    </div>
+                </div>
             </div>
+            <!-- Resultados -->
             <div id="column-2" class="column-2">
                 <div>
                     <h1 class="title-resul">Resultado</h1>
@@ -108,8 +130,9 @@
                     <div class="re">
                         <div class="resulDescription">
                             <h4>Convidados</h4>
-                            <div class="convidados">
-                                <div class="conv-description">
+                            <hr>
+                            <div class="list convidados">
+                                <div class="desc conv-description">
                                     <p>Adultos</p>
                                     <p>Crianças</p>
                                 </div>
@@ -118,11 +141,52 @@
                                     <p>-</p>
                                 </div>
                             </div>
+                            <h4>Carnes</h4>
+                            <hr>
+                            <div class="list carnes">
+                                <div class="desc carnes-description">
+                                    <p>Carne bovina</p>
+                                    <p>Linguiça</p>
+                                </div>
+                                <div class="qtd-carnes">
+                                    <p>-</p>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                            <h4>Acompanhamentos</h4>
+                            <hr>
+                            <div class="list acompanhamentos">
+                                <div class="desc acompanhamentos-description">
+                                    <p>Vinagrete</p>
+                                    <p>Arroz</p>
+                                    <p>Farofa pronta</p>
+                                </div>
+                                <div class="qtd-acompanhamentos">
+                                    <p>-</p>
+                                    <p>-</p>
+                                    <p>-</p>
+                                </div>
+                            </div>
+                            <h4>Suprimentos</h4>
+                            <hr>
+                            <div class="list suprimentos">
+                                <div class="desc suprimentos-description">
+                                    <p>Carvão</p>
+                                    <p>Copos</p>
+                                    <p>Pratos</p>
+                                </div>
+                                <div class="qtd-suprimentos">
+                                    <p>-</p>
+                                    <p>-</p>
+                                    <p>-</p>
+                                </div>
+                            </div>
                             <h4>Bebidas</h4>
-                            <div class="bebidas">
-                                <div class="bebidas-description">
+                            <hr>
+                            <div class="list bebidas">
+                                <div class="desc bebidas-description">
                                     <p>Cerveja (600ml)</p>
-                                    <p>Cervaja Lata</p>
+                                    <p>Cerveja Lata</p>
                                     <p>Refrigerante 2L</p>
                                     <p>Vodka</p>
                                 </div>
@@ -139,9 +203,7 @@
             </div>
         </div>
     </div>
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="./scripts/script.js"></script>
 </body>
 
