@@ -9,6 +9,7 @@ body{
 }
 header{
     display: block;
+    height: 30%;
 }
 .menu{
     width: 2000px;
@@ -33,16 +34,17 @@ header{
     padding-right: 2rem;
     max-width: 900px;
     margin: auto;
+    height: 80%;
 }
 .body{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-flow: row wrap;
     align-content: space-between;
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    margin: auto;
+    /* margin: auto; */
 }
 .column-1{
     width: 70%;
@@ -53,6 +55,7 @@ header{
     line-height: 1.47;
     color: #c70710;
     margin-bottom: 0;
+    margin-top: 0;
 }
 .subtitle{
     font-size: 14px;
@@ -139,13 +142,12 @@ header{
 
 /* -- Resultado -- */
 .column-2{
-    background-color: #817f7f;
+    background-color: #adadad;
     color: white;
     border-radius: 25px;
     margin-bottom: 10px;
     width: 30%;
-    margin: 0px; 
-    height: 250px;
+    margin: auto;
 }
 .title-resul{
     text-align: center;
@@ -154,11 +156,33 @@ header{
     line-height: 1.47;
     margin-bottom: 0;
 }
+.re{
+    padding-left: 30px;
+}
+.re h4{
+    margin-top: 50px;
+    margin-bottom: 0;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+}
+.convidados{
+    display: flex;
+}
+.conv-description, .bebidas-description{
+    width: 80%;
+}
+.conv-qtd, .qtd-bebidas{
+    font-weight: 700;
+}
+.bebidas{
+    display: flex;
+}
 
 footer{
     background-color: #C70710;
     margin-top: 35px;
-    height: 200px;
+    border-bottom: 41px solid #C70710;
 }
 
 @media screen and (max-width: 1200px){
