@@ -68,14 +68,6 @@ window.onload = function () {
         let qtdTotalCerveja = cervejaPP(qtdDuracao) * qtdAdultos
         let qtdTotalBebidas = bebidasPP(qtdDuracao) * qtdAdultos + (bebidasPP(qtdDuracao) / 2 * qtdCrianca);
 
-        console.log(qtdDuracao);
-        console.log(qtdAdultos);
-        console.log(qtdCrianca);
-
-        console.log(qtdTotalCarne);
-        console.log(qtdTotalCerveja);
-        console.log(qtdTotalBebidas);
-
         resultado.innerHTML = `<p>${qtdTotalCarne/1000}Kg de Carne</p>`
         resultado.innerHTML += `<p>${Math.ceil(qtdTotalCerveja/355)} Latas de Cerveja</p>`
         resultado.innerHTML += `<p>${Math.ceil(qtdTotalBebidas/2000)} Garrafas de 2L de Refrigerante</p>`
