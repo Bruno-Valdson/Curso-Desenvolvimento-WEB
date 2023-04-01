@@ -97,14 +97,16 @@ header {
     height: 120px;
 }
 #tp-bebidas{
-    margin: auto;
+    margin-right: 90px;
 }
 
 /* -- Icones de convidados -- */
 .icons {
     background-repeat: no-repeat;
     width: 120px;
-    background-size: 120px;
+    height: 80px;
+    background-size: 90px;
+    margin: auto;
 }
 
 .icon-adulto {
