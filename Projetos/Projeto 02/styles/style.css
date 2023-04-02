@@ -2,17 +2,19 @@ body {
     font-family: 'Heebo', sans-serif;
     font-weight: 400;
     background: #fff;
-    border-top: 8px solid #C70710;
+    border-top: 8px solid #ce1818;
     margin: 0 auto;
     overflow-x: hidden;
     margin: auto;
 }
+
 header {
     display: block;
     margin: auto;
     height: 400px;
     text-align: center;
 }
+
 .menu {
     width: 2000px;
     max-width: 100%;
@@ -21,11 +23,13 @@ header {
     margin-right: auto;
     position: relative;
 }
-.imgTop{
+
+.imgTop {
     height: 400px;
     text-align: center;
     margin: auto;
 }
+
 .container {
     margin-bottom: 3rem;
     padding-left: 2rem;
@@ -34,6 +38,7 @@ header {
     margin: auto;
     height: 80%;
 }
+
 .content {
     display: flex;
     flex-flow: row wrap;
@@ -42,14 +47,16 @@ header {
     align-items: center;
     box-sizing: border-box;
 }
+
 .column-1 {
     width: 70%;
 }
+
 .title {
     font-size: 31px;
     font-weight: bold;
     line-height: 1.47;
-    color: #c70710;
+    color: #ce1818;
     margin-bottom: 0;
     margin-top: 0;
 }
@@ -80,13 +87,22 @@ header {
     align-items: flex-end;
     margin-bottom: 30px;
 }
-.qtdAdultos, .qtdCrianca, .qtdTemp{
+
+.qtdAdultos, .qtdCrianca, .qtdTemp {
     padding-right: 20px;
     display: flex;
     height: 120px;
 }
-#tp-bebidas{
-    margin-right: 90px;
+
+.tp-bebidas {
+    cursor: pointer;
+    margin-right: 50px;
+    width: 150px;
+}
+
+.bebidas {
+    text-align: center;
+    margin: 10px 0px;
 }
 
 /* -- Icones de convidados -- */
@@ -111,18 +127,21 @@ header {
 }
 
 /* -- Icones bebidas -- */
-.bb-icons{
+.bb-icons {
     height: 64px;
     width: 64px;
-    margin: auto;
+    margin: 5px auto;
 }
-.icon-cerveja{
+
+.icon-cerveja {
     background-image: url(../img/cerveja-garrafa.png);
 }
-.icon-cerveja-lata{
+
+.icon-cerveja-lata {
     background-image: url(../img/lata-de-cerveja.png);
 }
-.icon-refrigerante{
+
+.icon-refrigerante {
     background-image: url(../img/refrigerantes.png);
 }
 
@@ -132,7 +151,7 @@ header {
     font-size: 60px;
     margin-top: 0;
     margin-bottom: 0;
-    color: #C70710;
+    color: #ce1818;
     font-weight: 600;
 }
 
@@ -161,34 +180,45 @@ header {
 }
 
 /* Lista - Acompanhamentos - Suprimentos */
-#outros {
+#acomp-suprim {
     display: inline-flex;
     align-items: center;
     font-size: 20px;
     font-weight: 450;
+    /* position: relative; */
 }
-#check{
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-label{
-    margin: auto;
-    margin-left: 5px;
-    margin-right: 50px;
-}
+
 #check {
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    border-style: outset;
 }
 
-/* -- Hover -- */
-.btnIcons:hover {
-    background-color: #C70710;
-    color: white;
+#check:checked {
+    -webkit-appearance: none;
+    background-color: #ce1818;
+    border-radius: 4px;
+    border-style: outset;
+}
+
+#check:hover {
+    -webkit-appearance: none;
+    background-color: #ce1818;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    border-radius: 4px;
+    border-style: outset;
+    
+}
+
+label {
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 50px;
 }
 
 /* -- Resultado -- */
@@ -218,7 +248,6 @@ label{
     margin-top: 10px;
     margin-bottom: 0;
     color: #000000;
-    /* font-size: 18px; */
     font-weight: 700;
 }
 
@@ -231,59 +260,85 @@ hr {
 }
 
 .desc {
-    width: 80%;
+    width: 65%;
+    text-align: left;
 }
 
-.conv-qtd, .qtd-bebidas {
+.qtd-re {
     font-weight: 700;
 }
 
-footer {
-    background-color: #C70710;
-    margin-top: 35px;
-    border-bottom: 41px solid #C70710;
+/* -- Hover -- */
+.btnIcons:hover {
+    background-color: #ce1818;
+    color: white;
 }
 
+.tp-bebidas:hover {
+    background-color: #ce1818;
+    color: white;
+    border-radius: 20px;
+}
+
+#tp-cerveja:hover {
+    background-color: #ce1818;
+    border-radius: 25px;
+    color: #fff;
+}
+
+/* footer */
+footer {
+    background-color: #ce1818;
+    margin-top: 35px;
+    border-bottom: 41px solid #ce1818;
+}
+
+
+/* Responsividade Media Create */
 @media screen and (max-width: 1200px) {
     .imgTop {
-        background-image: url(../img/img-churrasco.png);
+        /* background-image: url(../img/img-churrasco.png); */
         background-repeat: no-repeat;
         background-size: cover;
-        width: 55%;
-        height: 250px;
+        /* width: 55%; */
+        /* height: 250px; */
         margin: auto;
     }
 }
 
 @media screen and (max-width: 750px) {
     .imgTop {
-        background-image: url(../img/img-churrasco.png);
+        /* background-image: url(../img/img-churrasco.png); */
         background-repeat: no-repeat;
         background-size: cover;
-        width: 55%;
-        height: 250px;
+        /* width: 55%; */
+        /* height: 250px; */
         margin: auto;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .imgTop {
-        background-image: url(../img/img-churrasco.png);
+        /* background-image: url(../img/img-churrasco.png); */
         background-repeat: no-repeat;
         background-size: cover;
-        width: 65%;
-        height: 250px;
+        width: 100%;
+        height: 50%;
         margin: auto;
+    }
+
+    header {
+        height: 50%;
     }
 }
 
 @media screen and (max-width: 450px) {
     .imgTop {
-        background-image: url(../img/img-churrasco.png);
+        /* background-image: url(../img/img-churrasco.png); */
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
-        height: 250px;
+        /* width: 100%; */
+        /* height: 250px; */
         margin: auto;
     }
 }

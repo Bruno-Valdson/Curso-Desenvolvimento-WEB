@@ -73,22 +73,22 @@
                     <h6 class="subtitle">Defina as bebidas que serão consumidas no seu churrasco</h6>
                 </div>
                 <div id="qtdBebidas" class="qtd">
-                    <div id="tp-bebidas" class="tp-cerveja">
-                        <div class="bb-icons icon-cerveja"></div>
+                    <div id="tp-cerveja" class="tp-bebidas">
+                        <div id="icon-cerveja" class="bb-icons icon-cerveja"></div>
                         <div id="bb-cerveja">
-                            <p id="bebidas" class="cerveja">Cerveja (600ml)</p>
+                            <p id="cerveja" class="bebidas cerveja">Cerveja (600ml)</p>
                         </div>
                     </div>
-                    <div id="tp-bebidas" class="tp-cerveja-lata">
-                        <div class="bb-icons icon-cerveja-lata"></div>
+                    <div  id="tp-cerveja-lata" class="tp-bebidas">
+                        <div id="icon-cerveja-lata" class="bb-icons icon-cerveja-lata"></div>
                         <div id="bb-cerveja">
-                            <p id="bebidas" class="cerveja-lata">Cerveja lata</p>
+                            <p id="cerveja-lata" class="bebidas cerveja-lata">Cerveja lata</p>
                         </div>
                     </div>
-                    <div id="tp-bebidas" class="tp-refrigerante">
-                        <div class="bb-icons icon-refrigerante"></div>
+                    <div id="tp-refrigerante" class="tp-bebidas">
+                        <div id="icon-refrigerante" class="bb-icons icon-refrigerante"></div>
                         <div id="bb-cerveja">
-                            <p id="bebidas" class="refrigerante">Refrigerantes</p>
+                            <p id="refrigerante" class="bebidas refrigerante">Refrigerantes</p>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                     <h6 class="subtitle">Acompanhamentos para o seu seu churrasco</h6>
                 </div>
                 <div id="qtd-acompanhamentos" class="qtd">
-                    <div id="outros" class="acompanhamentos">
+                    <div id="acomp-suprim" class="acompanhamentos">
                         <input type="checkbox" id="check" name="check" value="VINAGRETE">
                         <label clasfor="description">VINAGRETE</label><br>
                         <input type="checkbox" id="check" name="check" value="ARROZ">
@@ -113,13 +113,13 @@
                     <h6 class="subtitle">Suprimentos para o seu churrasco</h6>
                 </div>
                 <div id="qtdSuprimentos" class="qtd">
-                    <div id="outros" class="acompanhamentos">
+                    <div id="acomp-suprim" class="suprimentos">
                         <input type="checkbox" id="check" name="check" value="VINAGRETE">
-                        <label clasfor="description">CARVÃO</label><br>
+                        <label class="checkmark" for="description">CARVÃO</label><br>
                         <input type="checkbox" id="check" name="check" value="ARROZ">
-                        <label for="description">COPOS</label><br>
+                        <label class="checkmark" for="description">COPOS</label><br>
                         <input type="checkbox" id="check" name="check" value="FAROFA PRONTA">
-                        <label for="description">PRATOS</label><br><br>
+                        <label class="checkmark" for="description">PRATOS</label><br><br>
                     </div>
                 </div>
             </div>
@@ -138,11 +138,12 @@
                                     <p>Adultos</p>
                                     <p>Crianças</p>
                                 </div>
-                                <div class="conv-qtd">
+                                <div id="conv-qtd" class="qtd-re conv-qtd">
                                     <p>-</p>
                                     <p>-</p>
                                 </div>
                             </div>
+                            <!-- Carnes -->
                             <h4>Carnes</h4>
                             <hr>
                             <div class="list carnes">
@@ -150,11 +151,12 @@
                                     <p>Carne bovina</p>
                                     <p>Linguiça</p>
                                 </div>
-                                <div class="qtd-carnes">
+                                <div id="qtd-carnes" class="qtd-re qtd-carnes">
                                     <p>-</p>
                                     <p>-</p>
                                 </div>
                             </div>
+                            <!-- Acompanhamentos -->
                             <h4>Acompanhamentos</h4>
                             <hr>
                             <div class="list acompanhamentos">
@@ -163,12 +165,13 @@
                                     <p>Arroz</p>
                                     <p>Farofa pronta</p>
                                 </div>
-                                <div class="qtd-acompanhamentos">
-                                    <p>-</p>
-                                    <p>-</p>
-                                    <p>-</p>
+                                <div id="qtd-acompanhamentos" class="qtd-re qtd-acompanhamentos">
+                                    <p id="resulVina">-</p>
+                                    <p id="resulArroz">-</p>
+                                    <p id="resulFarrofa">-</p>
                                 </div>
                             </div>
+                            <!-- Suprimentos -->
                             <h4>Suprimentos</h4>
                             <hr>
                             <div class="list suprimentos">
@@ -177,12 +180,13 @@
                                     <p>Copos</p>
                                     <p>Pratos</p>
                                 </div>
-                                <div class="qtd-suprimentos">
+                                <div id="qtd-suprimentos" class="qtd-re qtd-suprimentos">
                                     <p>-</p>
                                     <p>-</p>
                                     <p>-</p>
                                 </div>
                             </div>
+                            <!-- Bebidas -->
                             <h4>Bebidas</h4>
                             <hr>
                             <div class="list bebidas">
@@ -190,13 +194,11 @@
                                     <p>Cerveja (600ml)</p>
                                     <p>Cerveja Lata</p>
                                     <p>Refrigerante 2L</p>
-                                    <p>Vodka</p>
                                 </div>
-                                <div class="qtd-bebidas">
-                                    <p>-</p>
-                                    <p>-</p>
-                                    <p>-</p>
-                                    <p>-</p>
+                                <div id="qtd-bebidas"  class="qtd-re qtd-bebidas">
+                                    <p id="resulCer">-</p>
+                                    <p id="resulCerLata">-</p>
+                                    <p id="resulRefri">-</p>
                                 </div>
                             </div>
                         </div>
