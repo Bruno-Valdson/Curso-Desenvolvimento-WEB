@@ -12,25 +12,19 @@ window.onload = function () {
     var el2 = document.getElementById("qtdBebidas");
     var el3 = document.getElementById("qtd-acompanhamentos");
     var el4 = document.getElementById("qtdSuprimentos");
-    var qtd = 1;
-
-    var qtdDuracao = parseInt(document.getElementById("qtdDuracao").innerText);
-    var qtdCrianca = parseInt(document.getElementById("qtdCrianca").innerText);
-    var qtdAdultos = parseInt(document.getElementById("qtdAdulto").innerText);
-
-    var duracao = document.getElementById("qtdDuracao");
-    var criancas = document.getElementById("qtdCrianca");
-    var adulto = document.getElementById("qtdAdulto");
-
-    var resRefri = document.getElementById("resulRefri");
-    var resCerveLata = document.getElementById("resulCerLata");
-    var resCerveja = document.getElementById("resulCer");
-
 
     el.addEventListener('click', function (e) {
         var element = e.target.id;
 
         console.log(element);
+
+        let qtdDuracao = parseInt(document.getElementById("qtdDuracao").innerText);
+        let qtdCrianca = parseInt(document.getElementById("qtdCrianca").innerText);
+        let qtdAdultos = parseInt(document.getElementById("qtdAdulto").innerText);
+
+        let duracao = document.getElementById("qtdDuracao");
+        let criancas = document.getElementById("qtdCrianca");
+        let adulto = document.getElementById("qtdAdulto");
 
         switch (element) {
             case "btnPlus-adulto":
@@ -69,10 +63,14 @@ window.onload = function () {
 
         let resConvidados = document.getElementById("conv-qtd");
         let resCarnes = document.getElementById("qtd-carnes");
-
+        let resRefri = document.getElementById("resulRefri");
+        let resCerveLata = document.getElementById("resulCerLata");
+        let resCerveja = document.getElementById("resulCer");
 
         let qtdTotalCarne = carnePP(qtdDuracao) * qtdAdultos + (carnePP(qtdDuracao) / 2 * qtdCrianca);
-
+        let qtdTotalCervejaLata = cervejaLata(qtdDuracao) * qtdAdultos
+        let qtdTotalCerveja = cerveja(qtdDuracao) * qtdAdultos
+        let qtdTotalBebidas = bebidasPP(qtdDuracao) * qtdAdultos + (bebidasPP(qtdDuracao) / 2 * qtdCrianca);
 
         // Qunatidade de convidados
         resConvidados.innerHTML = `<p>${qtdAdultos}</p>`;
@@ -82,17 +80,19 @@ window.onload = function () {
         resCarnes.innerHTML = `<p>${qtdTotalCarne / 1000} Kg</p>`
         resCarnes.innerHTML += `<p>${(qtdTotalCarne / 1000) / 2} Kg</p>`
 
-        clicado(qtd);
+        //Quantidade bebidas
+        resCerveja.innerHTML = `<p>${Math.ceil(qtdTotalCerveja/600)} Garrafas</p>`
+        resCerveLata.innerHTML = `<p>${Math.ceil(qtdTotalCervejaLata/355)} Latas</p>`
+        resRefri.innerHTML = `<p>${Math.ceil(qtdTotalBebidas/2000)} Garrafas</p>`
     });
-
-    var qtdTotalCervejaLata = cervejaLata(qtdDuracao) * qtdAdultos
-    var qtdTotalCerveja = cerveja(qtdDuracao) * qtdAdultos
-    var qtdTotalBebidas = bebidasPP(qtdDuracao) * qtdAdultos + (bebidasPP(qtdDuracao) / 2 * qtdCrianca);
 
     // Clicar em Bebidas
     el2.addEventListener('click', function (e) {
         var ident = e.target.id;
+        var qtd;
+        console.log(ident);
 
+        let qtdCerveja = parseInt(document.getElementById("resulCer").innerText);
         let cerveja = document.getElementById("resulCer");
         let cervejaLata = document.getElementById("resulCerLata");
         let refri = document.getElementById("resulRefri");
@@ -102,16 +102,21 @@ window.onload = function () {
             case "bb-cerveja":
             case "cerveja":
             case "icon-cerveja":
-                clicado(qtd);
-                console.log(clicado(qtd));
+                if(cervejaLata.innerText != "-"){
+                    console.log(cerveja.innerText);
+                    qtd = 1;
+                }else{
+                    cerveja.innerText = 0;
+                    qtd = 0;
+                }
                 break;
             case "tp-cerveja-lata":
             case "bb-cerveja-lata":
             case "cerveja-lata":
             case "icon-cerveja-lata":
-                if (cervejaLata.innerText != "-") {
-                    // console.log(cervejaLata.innerText);
-                } else {
+                if(cervejaLata.innerText != "-"){
+                    console.log(cervejaLata.innerText);
+                }else{
                     cervejaLata.innerText = 0;
                 }
                 break
@@ -119,41 +124,17 @@ window.onload = function () {
             case "bb-refrigerante":
             case "refrigerante":
             case "icon-refrigerante":
-                if (refri.innerText != "-") {
-                    // console.log(refri.innerText);
-                } else {
+                if(refri.innerText != "-"){
+                    console.log(refri.innerText);
+                }else{
                     refri.innerText = 0;
                 }
                 break;
             default:
                 break;
         }
+        console.log(qtd);
     });
-
-
-    function clicado(qtd) {
-        if (cervejaLata.innerText == "-") {
-            // console.log(cerveja.innerText);
-            qtd = 0;
-            cerveja.innerText = 0;
-            return qtd;
-        } else {
-            qtd = 2;
-            return qtd;
-        }
-    }
-
-    function teste() {
-        //Quantidade bebidas
-        if (qtd >= 1) {
-            console.log("bebidas");
-            resCerveja.innerHTML = `<p>${Math.ceil(qtdTotalCerveja / 600)} Garrafas</p>`
-            resCerveLata.innerHTML = `<p>${Math.ceil(qtdTotalCervejaLata / 355)} Latas</p>`
-            resRefri.innerHTML = `<p>${Math.ceil(qtdTotalBebidas / 2000)} Garrafas</p>`
-        } else {
-            console.log("não bebidas");
-        }
-    }
 
     // Calcular quantidades
     function carnePP(qtdDuracao) {
