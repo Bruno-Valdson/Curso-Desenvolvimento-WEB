@@ -22,6 +22,8 @@ window.onload = function () {
     var clickCervejaLata;
     var clickRefri;
 
+    // var tpBebida;
+
     // funcão clicar qtd convidados
     el.addEventListener('click', function (e) {
         var element = e.target.id;
@@ -99,11 +101,11 @@ window.onload = function () {
                 if (cerveja.innerText != "-") {
                     console.log(cerveja.innerText);
                     clickCerveja = 0;
-                    cerGarrafa(clickCerveja);
+                    mostrarResultado(clickCerveja, "cerveja");
                 } else {
                     cerveja.innerText = 0;
                     clickCerveja = 1;
-                    cerGarrafa(clickCerveja);
+                    mostrarResultado(clickCerveja, "cerveja");
                 }
                 break;
             case "tp-cerveja-lata":
@@ -113,11 +115,11 @@ window.onload = function () {
                 if (cervejaLata.innerText != "-") {
                     console.log(cervejaLata.innerText);
                     clickCervejaLata = 0;
-                    cerLata(clickCervejaLata);
+                    mostrarResultado(clickCervejaLata, "cervejaLata");
                 } else {
                     cervejaLata.innerText = 0;
                     clickCervejaLata = 1;
-                    cerLata(clickCervejaLata);
+                    mostrarResultado(clickCervejaLata, "cervejaLata");
                 }
                 break
             case "tp-refrigerante":
@@ -127,11 +129,11 @@ window.onload = function () {
                 if (refri.innerText != "-") {
                     console.log(refri.innerText);
                     clickRefri = 0;
-                    Refrigerante(clickRefri);
+                    mostrarResultado(clickRefri, "refrigerante");
                 } else {
                     refri.innerText = 0;
                     clickRefri = 1;
-                    Refrigerante(clickRefri);
+                    mostrarResultado(clickRefri, "refrigerante");
                 }
                 break
             default:
@@ -141,64 +143,43 @@ window.onload = function () {
     });
 
     // Resultado Bebidas
-    // Resultado cerveja (600)
-    function cerGarrafa(qtd) {
+    function mostrarResultado(clickBtn, tpBebida) {
         let resCerveja = document.getElementById("resulCer");
         let qtdTotalCerveja = cerveja(qtdDuracao) * qtdAdultos;
-
-
-        console.log("Entrou na função");
-        console.log(qtd);
-        // console.log(qtdDuracao);
-
-
-        if (qtd > 0) {
-            resCerveja.innerHTML = `<p>${Math.ceil(qtdTotalCerveja / 600)} Garrafas</p>`
-            console.log("Entrou no IF TRUE " + Math.ceil(qtdTotalCerveja / 600));
-        } else {
-            resCerveja.innerHTML = "-";
-            console.log("Entrou no IF FALSE " + Math.ceil(qtdTotalCerveja / 600));
-        }
-    }
-
-    // Resultado Cerveja lata
-    function cerLata(qtd) {
         let resCerveLata = document.getElementById("resulCerLata");
         let qtdTotalCervejaLata = lataCerveja(qtdDuracao) * qtdAdultos;
-
-
-        console.log("Entrou na função");
-        console.log(qtd);
-        // console.log(qtdDuracao);
-
-
-        if (qtd > 0) {
-            resCerveLata.innerHTML = `<p>${Math.ceil(qtdTotalCervejaLata / 355)} Latas</p>`
-            console.log("Entrou no IF TRUE " + qtdTotalCervejaLata / 355);
-        } else {
-            resCerveLata.innerHTML = "-";
-            console.log("Entrou no IF FALSE " + qtdTotalCervejaLata / 355);
-        }
-    }
-
-    // Resultado Refrigerante
-    function Refrigerante(qtd) {
         let resRefri = document.getElementById("resulRefri");
         let qtdRefri = bebidasPP(qtdDuracao) * qtdAdultos + (bebidasPP(qtdDuracao) / 2 * qtdCrianca);
 
 
-        console.log("Entrou na função");
-        console.log(qtd);
-        // console.log(qtdDuracao);
+        if (tpBebida == "cerveja") {
+            if (clickBtn > 0) {
+                resCerveja.innerHTML = `<p>${Math.ceil(qtdTotalCerveja / 600)} Garrafas</p>`
+                console.log("Entrou no IF TRUE " + Math.ceil(qtdTotalCerveja / 600));
+            } else {
+                resCerveja.innerHTML = "-";
+                console.log("Entrou no IF FALSE " + Math.ceil(qtdTotalCerveja / 600));
+            }
+        } else if (tpBebida == "cervejaLata") {
 
+            if (clickBtn > 0) {
+                resCerveLata.innerHTML = `<p>${Math.ceil(qtdTotalCervejaLata / 355)} Latas</p>`
+                console.log("Entrou no IF TRUE " + qtdTotalCervejaLata / 355);
+            } else {
+                resCerveLata.innerHTML = "-";
+                console.log("Entrou no IF FALSE " + qtdTotalCervejaLata / 355);
+            }
 
-        if (qtd > 0) {
-            resRefri.innerHTML = `<p>${Math.ceil(qtdRefri / 2000)} Garrafas</p>`
-            console.log("Entrou no IF TRUE " + Math.ceil(qtdRefri / 2000));
-        } else {
-            resRefri.innerHTML = "-";
-            console.log("Entrou no IF FALSE " + Math.ceil(qtdRefri / 2000));
+        } else if (tpBebida == "refrigerante") {
+            if (clickBtn > 0) {
+                resRefri.innerHTML = `<p>${Math.ceil(qtdRefri / 2000)} Garrafas</p>`
+                console.log("Entrou no IF TRUE " + Math.ceil(qtdRefri / 2000));
+            } else {
+                resRefri.innerHTML = "-";
+                console.log("Entrou no IF FALSE " + Math.ceil(qtdRefri / 2000));
+            }
         }
+
     }
 
     // Calcular quantidades
