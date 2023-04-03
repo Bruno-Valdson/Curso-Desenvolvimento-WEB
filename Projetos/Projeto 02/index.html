@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body>
+<body id="site">
     <header class="menu">
         <div>
             <img class="imgTop" src="./img/img-churrasco.png" alt="churrascômetro">
@@ -99,12 +99,12 @@
                 </div>
                 <div id="qtd-acompanhamentos" class="qtd">
                     <div id="acomp-suprim" class="acompanhamentos">
-                        <input type="checkbox" id="check" name="check" value="VINAGRETE">
-                        <label clasfor="description">VINAGRETE</label><br>
-                        <input type="checkbox" id="check" name="check" value="ARROZ">
-                        <label for="description">ARROZ</label><br>
-                        <input type="checkbox" id="check" name="check" value="FAROFA PRONTA">
-                        <label for="description">FAROFA PRONTA</label><br><br>
+                        <input type="checkbox" id="check-vinagrete" name="check" value="VINAGRETE">
+                        <label id="label-vinagrete" clasfor="description">VINAGRETE</label><br>
+                        <input type="checkbox" id="check-paoAlho" name="check" value="PAO DE ALHO">
+                        <label id="label-paoAlho" for="description">PÃO DE ALHO</label><br>
+                        <input type="checkbox" id="check-farofa" name="check" value="FAROFA PRONTA">
+                        <label id="label-farofa" for="description">FAROFA PRONTA</label><br><br>
                     </div>
                 </div>
                 <!-- Suprimentos -->
@@ -112,14 +112,14 @@
                     <h4 class="title">Suprimentos</h4>
                     <h6 class="subtitle">Suprimentos para o seu churrasco</h6>
                 </div>
-                <div id="qtdSuprimentos" class="qtd">
+                <div id="qtd-suprimentos" class="qtd">
                     <div id="acomp-suprim" class="suprimentos">
-                        <input type="checkbox" id="check" name="check" value="VINAGRETE">
-                        <label class="checkmark" for="description">CARVÃO</label><br>
-                        <input type="checkbox" id="check" name="check" value="ARROZ">
-                        <label class="checkmark" for="description">COPOS</label><br>
-                        <input type="checkbox" id="check" name="check" value="FAROFA PRONTA">
-                        <label class="checkmark" for="description">PRATOS</label><br><br>
+                        <input type="checkbox" id="check-carvao" name="check" value="CARVÃO">
+                        <label id="label-carvao" class="checkmark" for="description">CARVÃO</label><br>
+                        <input type="checkbox" id="check-copos" name="check" value="COPOS">
+                        <label id="label-copos" class="checkmark" for="description">COPOS</label><br>
+                        <input type="checkbox" id="check-pratos" name="check" value="PRATOS">
+                        <label id="label-pratos" class="checkmark" for="description">PRATOS</label><br><br>
                     </div>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                                 </div>
                                 <div id="qtd-acompanhamentos" class="qtd-re qtd-acompanhamentos">
                                     <p id="resulVina">-</p>
-                                    <p id="resulArroz">-</p>
+                                    <p id="resulPaoAlho">-</p>
                                     <p id="resulFarrofa">-</p>
                                 </div>
                             </div>
@@ -181,9 +181,9 @@
                                     <p>Pratos</p>
                                 </div>
                                 <div id="qtd-suprimentos" class="qtd-re qtd-suprimentos">
-                                    <p>-</p>
-                                    <p>-</p>
-                                    <p>-</p>
+                                    <p id="resulCarvao">-</p>
+                                    <p id="resulCopos">-</p>
+                                    <p id="resulPratos">-</p>
                                 </div>
                             </div>
                             <!-- Bebidas -->
