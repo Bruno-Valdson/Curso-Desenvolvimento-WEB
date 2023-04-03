@@ -267,6 +267,8 @@ hr {
 .qtd-re {
     font-weight: 700;
     text-align: left;
+    font-size: 13px;
+    line-height: 1.25rem;
 }
 
 /* -- Hover -- */
@@ -298,29 +300,22 @@ footer {
 /* Responsividade Media Create */
 @media screen and (max-width: 1200px) {
     .imgTop {
-        /* background-image: url(../img/img-churrasco.png); */
         background-repeat: no-repeat;
         background-size: cover;
-        /* width: 55%; */
-        /* height: 250px; */
         margin: auto;
     }
 }
 
 @media screen and (max-width: 750px) {
     .imgTop {
-        /* background-image: url(../img/img-churrasco.png); */
         background-repeat: no-repeat;
         background-size: cover;
-        /* width: 55%; */
-        /* height: 250px; */
         margin: auto;
     }
 }
 
 @media screen and (max-width: 650px) {
     .imgTop {
-        /* background-image: url(../img/img-churrasco.png); */
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -335,11 +330,8 @@ footer {
 
 @media screen and (max-width: 450px) {
     .imgTop {
-        /* background-image: url(../img/img-churrasco.png); */
         background-repeat: no-repeat;
         background-size: cover;
-        /* width: 100%; */
-        /* height: 250px; */
         margin: auto;
     }
 }
