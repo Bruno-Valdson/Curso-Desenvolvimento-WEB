@@ -188,7 +188,7 @@ header {
     /* position: relative; */
 }
 
-#check {
+input[type="checkbox"] {
     height: 25px;
     width: 25px;
     cursor: pointer;
@@ -197,14 +197,14 @@ header {
     border-style: outset;
 }
 
-#check:checked {
+input[type="checkbox"]:checked {
     -webkit-appearance: none;
     background-color: #ce1818;
     border-radius: 4px;
     border-style: outset;
 }
 
-#check:hover {
+input[type="checkbox"]:hover {
     -webkit-appearance: none;
     background-color: #ce1818;
     height: 30px;
@@ -218,7 +218,7 @@ header {
 label {
     margin: auto;
     margin-left: 5px;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 /* -- Resultado -- */
