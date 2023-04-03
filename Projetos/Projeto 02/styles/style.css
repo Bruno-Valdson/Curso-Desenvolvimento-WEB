@@ -212,7 +212,7 @@ input[type="checkbox"]:hover {
     border-radius: 4px;
     border-radius: 4px;
     border-style: outset;
-    
+
 }
 
 label {
@@ -298,11 +298,78 @@ footer {
 
 
 /* Responsividade Media Create */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 950px) {
+    body {
+        /* margin: 0 50px; */
+        width: 100%;
+    }
+
     .imgTop {
         background-repeat: no-repeat;
         background-size: cover;
         margin: auto;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .column-1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .qtd {
+        max-width: 600px;
+        margin: 30px auto;
+    }
+
+    .column-2 {
+        width: 100%;
+        line-height: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .resultado {
+        margin: 25px;
+        padding: 25px;
+    }
+
+    .re {
+        padding-left: 5px;
+    }
+
+    .suprimentos, .acompanhamentos {
+        margin: auto;
+    }
+
+    .tp-bebidas {
+        margin: auto;
+    }
+
+    .qtdAdultos, .qtdCrianca, .qtdTemp {
+        margin: auto;
+    }
+
+    .resulDescription {
+        margin: auto;
+    }
+
+    .resulMediaCreate {
+        margin: auto;
+    }
+
+    .qtd-re {
+        font-size: 1em;
+    }
+
+    .title-resul {
+        font-size: 5rem;
     }
 }
 
@@ -314,7 +381,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 680px) {
     .imgTop {
         background-repeat: no-repeat;
         background-size: cover;
@@ -333,5 +400,74 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         margin: auto;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .column-1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .qtd {
+        display: block;
+        margin: 30px auto;
+    }
+
+    .column-2 {
+        width: 100%;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .resultado {
+        margin: 25px;
+        padding: 25px;
+    }
+
+    .re {
+        padding-left: 5px;
+    }
+
+    #acomp-suprim {
+        display: block;
+        margin-left: 40px;
+        text-align: left;
+    }
+    input[type="checkbox"]{
+        height: 30px;
+        width: 30px;
+        margin: 5px;
+    }
+
+    .tp-bebidas {
+        margin: auto;
+    }
+
+    .qtdAdultos, .qtdCrianca, .qtdTemp {
+        margin: auto;
+    }
+
+    .resulDescription {
+        margin: auto;
+    }
+
+    .resulMediaCreate {
+        margin: auto;
+    }
+
+    .qtd-re {
+        font-size: 1rem;
+    }
+
+    .title-resul {
+        font-size: 2rem;
     }
 }
