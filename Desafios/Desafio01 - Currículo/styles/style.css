@@ -1,0 +1,125 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-style: normal;
+    background: linear-gradient(30deg, black 35%, green 95%);
+    color: white;
+}
+.head{
+    position: sticky;
+    top: 0;
+    margin: auto;
+    overflow: hidden;
+    width: 50%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: green;
+    font-size: 18px;
+    font-weight: 600;
+}
+.menu{
+    padding: 0px;
+    margin: 0px;
+    float: right;
+    list-style: none;
+}
+.menu li{
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+}
+.menu a{
+    color: green;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.menu a:visited{
+    color: black;
+}
+.menu a:hover{
+    padding: 10px;
+    background-color: white;;
+    color: #00FF00;
+}
+.logo{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+
+h1{
+    font-size: 7vw;
+    margin: auto;
+    text-align: center;
+    color: #00FF00;
+    text-shadow: 4px 4px 4px black;
+}
+p{
+    text-align: justify;
+    color: white;
+}
+h2{
+    color: #00FF00;
+}
+.imagem{
+    margin-left: 1px;
+}
+.descrição{
+    margin-top: auto;
+    color: #00FF00;
+    font-size: 12px;
+}
+#social{
+    color: white;
+}
+#social ul{
+    list-style: none;
+    padding: 0px;
+}
+li{
+    margin-top: 3px;
+    padding-top: 3px;
+}
+.link{
+    background-color: yellow;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-style: normal;
+    color: black;
+    padding: 2px;
+    text-decoration: none;
+}
+.link:hover{
+    padding: 2px;
+    color: white;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 670px){
+    .head{
+        position: static;
+    }
+    .logo{
+        float: none;
+        text-align: center;
+    }
+    .menu{
+        margin-top: 20px;
+        float: none;
+        text-align: center;
+    }
+    .menu li{
+        float: none;
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+}
